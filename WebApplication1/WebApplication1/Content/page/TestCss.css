@@ -1,0 +1,36 @@
+﻿body ,div{
+    border: 1px solid black;
+}
+#last {
+    display: flex;
+}
+#last>div {
+    border: 1px solid #00bfff;
+    flex: 1;
+}
+#Content{ 
+    overflow: hidden;
+    text-align: center;
+}
+#Content>div{
+    /*height: 500px;
+    width: 500px;*/
+    margin: 0 auto;
+    border: 3px solid  black;
+    overflow: hidden;
+}
+
+#Content>div>div {
+    background-color: #e6ab5e;
+    border: 3px solid black;
+    height: 70px;
+    width: 70px;
+    float: left;
+}
+.clear {
+    clear: left;
+}
+#Content>div>div.on {
+    background-color: blue;
+}
+ 

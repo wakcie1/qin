@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>小游戏</title>
+    <link rel="stylesheet" type="text/css" href="~/Content/page/TestCss.css" />
+    <script src="/Scripts/angular-1.5.8.min.js"></script>
+</head>
+<body>
+    <div ng-app="myApp" ng-controller="myCtrl" ng-init="init()">
+        <div style="text-align: center">
+            <h1>翻转拼图小游戏</h1>
+        </div>
+        <div id="Content" >
+            <div ng-style="Contain" >
+                <div ng-repeat ="item in grid track by $index" ng-class="{on:{{item}}==1}" ng-class-1="{clear:$index%size==0}" ng-click="changeColor($index)" ></div> 
+            </div>
+        </div>
+        <div id="last"> 
+            <div style="text-align: right"> 
+                <button>玩法说明</button>
+                棋盘大小：{{size}}*{{size}}
+            </div>
+            <div></div>
+            <div>
+                <button ng-click="up()">提高难度</button>
+                <button ng-click="down()">降低难度</button>
+            </div>
+        </div>
+    </div>
+    <script src="~/Scripts/page/TestIndex1.js"></script>
+</body>
+</html>
+
+
+
